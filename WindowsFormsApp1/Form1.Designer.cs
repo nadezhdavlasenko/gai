@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label positionCodeLabel;
             System.Windows.Forms.Label phoneLabel;
@@ -43,22 +42,25 @@
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label numberOfVacanciesLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.candidateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.candidateTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.CandidateTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.DataSet1TableAdapters.TableAdapterManager();
+            this.hiringContractTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.HiringContractTableAdapter();
+            this.positionTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.PositionTableAdapter();
             this.candidateBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.candidateBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.candidateDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,14 +76,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.hiringContractBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hiringContractTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.HiringContractTableAdapter();
             this.hiringContractDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.positionTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.PositionTableAdapter();
             this.positionDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,16 +105,19 @@
             this.candidateTableAdapter1 = new WindowsFormsApp1.DataSet1TableAdapters.CandidateTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.MoveFirst = new System.Windows.Forms.Button();
-            this.MoveNext = new System.Windows.Forms.Button();
-            this.MovePrevious = new System.Windows.Forms.Button();
             this.MoveLast = new System.Windows.Forms.Button();
+            this.MovePrevious = new System.Windows.Forms.Button();
+            this.MoveNext = new System.Windows.Forms.Button();
+            this.MoveFirst = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -147,6 +150,123 @@
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(25, 28);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(35, 25);
+            idLabel.TabIndex = 2;
+            idLabel.Text = "id:";
+            // 
+            // positionCodeLabel
+            // 
+            positionCodeLabel.AutoSize = true;
+            positionCodeLabel.Location = new System.Drawing.Point(25, 65);
+            positionCodeLabel.Name = "positionCodeLabel";
+            positionCodeLabel.Size = new System.Drawing.Size(150, 25);
+            positionCodeLabel.TabIndex = 4;
+            positionCodeLabel.Text = "position Code:";
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(25, 102);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(78, 25);
+            phoneLabel.TabIndex = 6;
+            phoneLabel.Text = "phone:";
+            // 
+            // fullNameLabel
+            // 
+            fullNameLabel.AutoSize = true;
+            fullNameLabel.Location = new System.Drawing.Point(25, 139);
+            fullNameLabel.Name = "fullNameLabel";
+            fullNameLabel.Size = new System.Drawing.Size(108, 25);
+            fullNameLabel.TabIndex = 8;
+            fullNameLabel.Text = "full Name:";
+            // 
+            // resumeLinkLabel
+            // 
+            resumeLinkLabel.AutoSize = true;
+            resumeLinkLabel.Location = new System.Drawing.Point(25, 175);
+            resumeLinkLabel.Name = "resumeLinkLabel";
+            resumeLinkLabel.Size = new System.Drawing.Size(135, 25);
+            resumeLinkLabel.TabIndex = 10;
+            resumeLinkLabel.Text = "resume Link:";
+            // 
+            // codeLabel
+            // 
+            codeLabel.AutoSize = true;
+            codeLabel.Location = new System.Drawing.Point(22, 37);
+            codeLabel.Name = "codeLabel";
+            codeLabel.Size = new System.Drawing.Size(65, 25);
+            codeLabel.TabIndex = 16;
+            codeLabel.Text = "code:";
+            // 
+            // fullNameLabel1
+            // 
+            fullNameLabel1.AutoSize = true;
+            fullNameLabel1.Location = new System.Drawing.Point(22, 74);
+            fullNameLabel1.Name = "fullNameLabel1";
+            fullNameLabel1.Size = new System.Drawing.Size(108, 25);
+            fullNameLabel1.TabIndex = 18;
+            fullNameLabel1.Text = "full Name:";
+            // 
+            // positionLabel
+            // 
+            positionLabel.AutoSize = true;
+            positionLabel.Location = new System.Drawing.Point(22, 111);
+            positionLabel.Name = "positionLabel";
+            positionLabel.Size = new System.Drawing.Size(93, 25);
+            positionLabel.TabIndex = 20;
+            positionLabel.Text = "position:";
+            // 
+            // dateLabel
+            // 
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(22, 149);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(60, 25);
+            dateLabel.TabIndex = 22;
+            dateLabel.Text = "date:";
+            // 
+            // positionCodeLabel1
+            // 
+            positionCodeLabel1.AutoSize = true;
+            positionCodeLabel1.Location = new System.Drawing.Point(17, 35);
+            positionCodeLabel1.Name = "positionCodeLabel1";
+            positionCodeLabel1.Size = new System.Drawing.Size(150, 25);
+            positionCodeLabel1.TabIndex = 24;
+            positionCodeLabel1.Text = "position Code:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(17, 72);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(71, 25);
+            nameLabel.TabIndex = 26;
+            nameLabel.Text = "name:";
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(17, 109);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(123, 25);
+            descriptionLabel.TabIndex = 28;
+            descriptionLabel.Text = "description:";
+            // 
+            // numberOfVacanciesLabel
+            // 
+            numberOfVacanciesLabel.AutoSize = true;
+            numberOfVacanciesLabel.Location = new System.Drawing.Point(17, 146);
+            numberOfVacanciesLabel.Name = "numberOfVacanciesLabel";
+            numberOfVacanciesLabel.Size = new System.Drawing.Size(224, 25);
+            numberOfVacanciesLabel.TabIndex = 30;
+            numberOfVacanciesLabel.Text = "number Of Vacancies:";
+            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
@@ -168,6 +288,14 @@
             this.tableAdapterManager.HiringContractTableAdapter = this.hiringContractTableAdapter;
             this.tableAdapterManager.PositionTableAdapter = this.positionTableAdapter;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // hiringContractTableAdapter
+            // 
+            this.hiringContractTableAdapter.ClearBeforeFill = true;
+            // 
+            // positionTableAdapter
+            // 
+            this.positionTableAdapter.ClearBeforeFill = true;
             // 
             // candidateBindingNavigator
             // 
@@ -198,6 +326,31 @@
             this.candidateBindingNavigator.Size = new System.Drawing.Size(2203, 39);
             this.candidateBindingNavigator.TabIndex = 0;
             this.candidateBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(36, 36);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(71, 36);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(36, 36);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -231,16 +384,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(71, 36);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem
@@ -263,26 +409,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(36, 36);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // candidateBindingNavigatorSaveItem
             // 
@@ -340,15 +468,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "resumeLink";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(25, 28);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(35, 25);
-            idLabel.TabIndex = 2;
-            idLabel.Text = "id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "id", true));
@@ -356,15 +475,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 31);
             this.idTextBox.TabIndex = 3;
-            // 
-            // positionCodeLabel
-            // 
-            positionCodeLabel.AutoSize = true;
-            positionCodeLabel.Location = new System.Drawing.Point(25, 65);
-            positionCodeLabel.Name = "positionCodeLabel";
-            positionCodeLabel.Size = new System.Drawing.Size(150, 25);
-            positionCodeLabel.TabIndex = 4;
-            positionCodeLabel.Text = "position Code:";
             // 
             // positionCodeTextBox
             // 
@@ -374,15 +484,6 @@
             this.positionCodeTextBox.Size = new System.Drawing.Size(100, 31);
             this.positionCodeTextBox.TabIndex = 5;
             // 
-            // phoneLabel
-            // 
-            phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(25, 102);
-            phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(78, 25);
-            phoneLabel.TabIndex = 6;
-            phoneLabel.Text = "phone:";
-            // 
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "phone", true));
@@ -391,15 +492,6 @@
             this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
             this.phoneTextBox.TabIndex = 7;
             // 
-            // fullNameLabel
-            // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(25, 139);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(108, 25);
-            fullNameLabel.TabIndex = 8;
-            fullNameLabel.Text = "full Name:";
-            // 
             // fullNameTextBox
             // 
             this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "fullName", true));
@@ -407,15 +499,6 @@
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(100, 31);
             this.fullNameTextBox.TabIndex = 9;
-            // 
-            // resumeLinkLabel
-            // 
-            resumeLinkLabel.AutoSize = true;
-            resumeLinkLabel.Location = new System.Drawing.Point(25, 175);
-            resumeLinkLabel.Name = "resumeLinkLabel";
-            resumeLinkLabel.Size = new System.Drawing.Size(135, 25);
-            resumeLinkLabel.TabIndex = 10;
-            resumeLinkLabel.Text = "resume Link:";
             // 
             // resumeLinkTextBox
             // 
@@ -449,10 +532,6 @@
             // 
             this.hiringContractBindingSource.DataMember = "HiringContract";
             this.hiringContractBindingSource.DataSource = this.dataSet1;
-            // 
-            // hiringContractTableAdapter
-            // 
-            this.hiringContractTableAdapter.ClearBeforeFill = true;
             // 
             // hiringContractDataGridView
             // 
@@ -499,10 +578,6 @@
             this.positionBindingSource.DataMember = "Position";
             this.positionBindingSource.DataSource = this.dataSet1;
             // 
-            // positionTableAdapter
-            // 
-            this.positionTableAdapter.ClearBeforeFill = true;
-            // 
             // positionDataGridView
             // 
             this.positionDataGridView.AutoGenerateColumns = false;
@@ -543,15 +618,6 @@
             this.dataGridViewTextBoxColumn13.HeaderText = "numberOfVacancies";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // codeLabel
-            // 
-            codeLabel.AutoSize = true;
-            codeLabel.Location = new System.Drawing.Point(22, 37);
-            codeLabel.Name = "codeLabel";
-            codeLabel.Size = new System.Drawing.Size(65, 25);
-            codeLabel.TabIndex = 16;
-            codeLabel.Text = "code:";
-            // 
             // codeTextBox
             // 
             this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hiringContractBindingSource, "code", true));
@@ -559,15 +625,6 @@
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(200, 31);
             this.codeTextBox.TabIndex = 17;
-            // 
-            // fullNameLabel1
-            // 
-            fullNameLabel1.AutoSize = true;
-            fullNameLabel1.Location = new System.Drawing.Point(22, 74);
-            fullNameLabel1.Name = "fullNameLabel1";
-            fullNameLabel1.Size = new System.Drawing.Size(108, 25);
-            fullNameLabel1.TabIndex = 18;
-            fullNameLabel1.Text = "full Name:";
             // 
             // fullNameTextBox1
             // 
@@ -577,15 +634,6 @@
             this.fullNameTextBox1.Size = new System.Drawing.Size(200, 31);
             this.fullNameTextBox1.TabIndex = 19;
             // 
-            // positionLabel
-            // 
-            positionLabel.AutoSize = true;
-            positionLabel.Location = new System.Drawing.Point(22, 111);
-            positionLabel.Name = "positionLabel";
-            positionLabel.Size = new System.Drawing.Size(93, 25);
-            positionLabel.TabIndex = 20;
-            positionLabel.Text = "position:";
-            // 
             // positionTextBox
             // 
             this.positionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hiringContractBindingSource, "position", true));
@@ -593,15 +641,6 @@
             this.positionTextBox.Name = "positionTextBox";
             this.positionTextBox.Size = new System.Drawing.Size(200, 31);
             this.positionTextBox.TabIndex = 21;
-            // 
-            // dateLabel
-            // 
-            dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(22, 149);
-            dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(60, 25);
-            dateLabel.TabIndex = 22;
-            dateLabel.Text = "date:";
             // 
             // dateDateTimePicker
             // 
@@ -611,15 +650,6 @@
             this.dateDateTimePicker.Size = new System.Drawing.Size(200, 31);
             this.dateDateTimePicker.TabIndex = 23;
             // 
-            // positionCodeLabel1
-            // 
-            positionCodeLabel1.AutoSize = true;
-            positionCodeLabel1.Location = new System.Drawing.Point(17, 35);
-            positionCodeLabel1.Name = "positionCodeLabel1";
-            positionCodeLabel1.Size = new System.Drawing.Size(150, 25);
-            positionCodeLabel1.TabIndex = 24;
-            positionCodeLabel1.Text = "position Code:";
-            // 
             // positionCodeTextBox1
             // 
             this.positionCodeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "positionCode", true));
@@ -627,15 +657,6 @@
             this.positionCodeTextBox1.Name = "positionCodeTextBox1";
             this.positionCodeTextBox1.Size = new System.Drawing.Size(100, 31);
             this.positionCodeTextBox1.TabIndex = 25;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(17, 72);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(71, 25);
-            nameLabel.TabIndex = 26;
-            nameLabel.Text = "name:";
             // 
             // nameTextBox
             // 
@@ -645,15 +666,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(100, 31);
             this.nameTextBox.TabIndex = 27;
             // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(17, 109);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(123, 25);
-            descriptionLabel.TabIndex = 28;
-            descriptionLabel.Text = "description:";
-            // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "description", true));
@@ -661,15 +673,6 @@
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 31);
             this.descriptionTextBox.TabIndex = 29;
-            // 
-            // numberOfVacanciesLabel
-            // 
-            numberOfVacanciesLabel.AutoSize = true;
-            numberOfVacanciesLabel.Location = new System.Drawing.Point(17, 146);
-            numberOfVacanciesLabel.Name = "numberOfVacanciesLabel";
-            numberOfVacanciesLabel.Size = new System.Drawing.Size(224, 25);
-            numberOfVacanciesLabel.TabIndex = 30;
-            numberOfVacanciesLabel.Text = "number Of Vacancies:";
             // 
             // numberOfVacanciesTextBox
             // 
@@ -792,6 +795,46 @@
             this.tabPage1.Text = "Candidate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // MoveLast
+            // 
+            this.MoveLast.Location = new System.Drawing.Point(566, 118);
+            this.MoveLast.Name = "MoveLast";
+            this.MoveLast.Size = new System.Drawing.Size(130, 46);
+            this.MoveLast.TabIndex = 41;
+            this.MoveLast.Text = "MoveLast";
+            this.MoveLast.UseVisualStyleBackColor = true;
+            this.MoveLast.Click += new System.EventHandler(this.MoveLast_Click);
+            // 
+            // MovePrevious
+            // 
+            this.MovePrevious.Location = new System.Drawing.Point(737, 62);
+            this.MovePrevious.Name = "MovePrevious";
+            this.MovePrevious.Size = new System.Drawing.Size(170, 46);
+            this.MovePrevious.TabIndex = 40;
+            this.MovePrevious.Text = "MovePrevious";
+            this.MovePrevious.UseVisualStyleBackColor = true;
+            this.MovePrevious.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // MoveNext
+            // 
+            this.MoveNext.Location = new System.Drawing.Point(737, 118);
+            this.MoveNext.Name = "MoveNext";
+            this.MoveNext.Size = new System.Drawing.Size(170, 46);
+            this.MoveNext.TabIndex = 39;
+            this.MoveNext.Text = "MoveNext";
+            this.MoveNext.UseVisualStyleBackColor = true;
+            this.MoveNext.Click += new System.EventHandler(this.MoveNext_Click);
+            // 
+            // MoveFirst
+            // 
+            this.MoveFirst.Location = new System.Drawing.Point(566, 62);
+            this.MoveFirst.Name = "MoveFirst";
+            this.MoveFirst.Size = new System.Drawing.Size(130, 46);
+            this.MoveFirst.TabIndex = 37;
+            this.MoveFirst.Text = "MoveFirst";
+            this.MoveFirst.UseVisualStyleBackColor = true;
+            this.MoveFirst.Click += new System.EventHandler(this.MoveFirst_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button9);
@@ -817,72 +860,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hiring contract";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button13);
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.button15);
-            this.tabPage3.Controls.Add(this.button16);
-            this.tabPage3.Controls.Add(this.positionDataGridView);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.numberOfVacanciesTextBox);
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(numberOfVacanciesLabel);
-            this.tabPage3.Controls.Add(this.descriptionTextBox);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(descriptionLabel);
-            this.tabPage3.Controls.Add(this.nameTextBox);
-            this.tabPage3.Controls.Add(positionCodeLabel1);
-            this.tabPage3.Controls.Add(nameLabel);
-            this.tabPage3.Controls.Add(this.positionCodeTextBox1);
-            this.tabPage3.Location = new System.Drawing.Point(8, 39);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(2175, 653);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Position";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // MoveFirst
-            // 
-            this.MoveFirst.Location = new System.Drawing.Point(566, 62);
-            this.MoveFirst.Name = "MoveFirst";
-            this.MoveFirst.Size = new System.Drawing.Size(130, 46);
-            this.MoveFirst.TabIndex = 37;
-            this.MoveFirst.Text = "MoveFirst";
-            this.MoveFirst.UseVisualStyleBackColor = true;
-            this.MoveFirst.Click += new System.EventHandler(this.MoveFirst_Click);
-            // 
-            // MoveNext
-            // 
-            this.MoveNext.Location = new System.Drawing.Point(737, 118);
-            this.MoveNext.Name = "MoveNext";
-            this.MoveNext.Size = new System.Drawing.Size(170, 46);
-            this.MoveNext.TabIndex = 39;
-            this.MoveNext.Text = "MoveNext";
-            this.MoveNext.UseVisualStyleBackColor = true;
-            this.MoveNext.Click += new System.EventHandler(this.MoveNext_Click);
-            // 
-            // MovePrevious
-            // 
-            this.MovePrevious.Location = new System.Drawing.Point(737, 62);
-            this.MovePrevious.Name = "MovePrevious";
-            this.MovePrevious.Size = new System.Drawing.Size(170, 46);
-            this.MovePrevious.TabIndex = 40;
-            this.MovePrevious.Text = "MovePrevious";
-            this.MovePrevious.UseVisualStyleBackColor = true;
-            this.MovePrevious.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // MoveLast
-            // 
-            this.MoveLast.Location = new System.Drawing.Point(566, 118);
-            this.MoveLast.Name = "MoveLast";
-            this.MoveLast.Size = new System.Drawing.Size(130, 46);
-            this.MoveLast.TabIndex = 41;
-            this.MoveLast.Text = "MoveLast";
-            this.MoveLast.UseVisualStyleBackColor = true;
-            this.MoveLast.Click += new System.EventHandler(this.MoveLast_Click);
             // 
             // button9
             // 
@@ -920,9 +897,68 @@
             this.button12.Text = "MoveFirst";
             this.button12.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button19);
+            this.tabPage3.Controls.Add(this.button18);
+            this.tabPage3.Controls.Add(this.button17);
+            this.tabPage3.Controls.Add(this.button13);
+            this.tabPage3.Controls.Add(this.button14);
+            this.tabPage3.Controls.Add(this.button15);
+            this.tabPage3.Controls.Add(this.button16);
+            this.tabPage3.Controls.Add(this.positionDataGridView);
+            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.numberOfVacanciesTextBox);
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(numberOfVacanciesLabel);
+            this.tabPage3.Controls.Add(this.descriptionTextBox);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(descriptionLabel);
+            this.tabPage3.Controls.Add(this.nameTextBox);
+            this.tabPage3.Controls.Add(positionCodeLabel1);
+            this.tabPage3.Controls.Add(nameLabel);
+            this.tabPage3.Controls.Add(this.positionCodeTextBox1);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(2175, 653);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Position";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(632, 78);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(339, 40);
+            this.button19.TabIndex = 49;
+            this.button19.Text = "Sort by number of vacancies";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(632, 134);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(339, 40);
+            this.button18.TabIndex = 48;
+            this.button18.Text = "Filter by name";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(632, 27);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(339, 40);
+            this.button17.TabIndex = 47;
+            this.button17.Text = "Find by name";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(652, 134);
+            this.button13.Location = new System.Drawing.Point(1179, 323);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(130, 46);
             this.button13.TabIndex = 45;
@@ -931,7 +967,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(823, 78);
+            this.button14.Location = new System.Drawing.Point(1350, 267);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(170, 46);
             this.button14.TabIndex = 44;
@@ -940,7 +976,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(823, 134);
+            this.button15.Location = new System.Drawing.Point(1350, 323);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(170, 46);
             this.button15.TabIndex = 43;
@@ -949,7 +985,7 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(652, 78);
+            this.button16.Location = new System.Drawing.Point(1179, 267);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(130, 46);
             this.button16.TabIndex = 42;
@@ -1066,6 +1102,9 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
     }
 }
 

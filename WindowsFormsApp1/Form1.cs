@@ -107,5 +107,37 @@ namespace WindowsFormsApp1
         {
             candidateBindingSource.MoveNext();
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            string name = nameTextBox.Text;
+            int foundIndex = positionBindingSource.Find("name", name);
+            if (foundIndex == -1)
+            {
+                MessageBox.Show("Not found");
+                return;
+            }
+            this.positionBindingSource.Position = foundIndex;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            positionBindingSource.Sort = "numberOfVacancies ASC";
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (nameTextBox.Text == "")
+            {
+                positionBindingSource.Filter = "";
+            }
+            else
+            {
+                positionBindingSource.Filter = string.Format("name LIKE '{0}'", nameTextBox.Text);
+            }
+        }
+
+       
+    
     }
 }
