@@ -99,6 +99,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             positionCodeLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
@@ -148,7 +151,6 @@
             // candidateBindingNavigator
             // 
             this.candidateBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.candidateBindingNavigator.BindingSource = this.candidateBindingSource;
             this.candidateBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.candidateBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.candidateBindingNavigator.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -182,7 +184,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(36, 36);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -197,7 +199,7 @@
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -211,14 +213,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(71, 32);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(71, 36);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -241,7 +243,7 @@
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -266,7 +268,7 @@
             this.candidateBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.candidateBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("candidateBindingNavigatorSaveItem.Image")));
             this.candidateBindingNavigatorSaveItem.Name = "candidateBindingNavigatorSaveItem";
-            this.candidateBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.candidateBindingNavigatorSaveItem.Size = new System.Drawing.Size(36, 36);
             this.candidateBindingNavigatorSaveItem.Text = "Save Data";
             this.candidateBindingNavigatorSaveItem.Click += new System.EventHandler(this.candidateBindingNavigatorSaveItem_Click);
             // 
@@ -696,11 +698,44 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(401, 411);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(157, 45);
+            this.delete.TabIndex = 36;
+            this.delete.Text = "delete";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1523, 411);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(157, 45);
+            this.button7.TabIndex = 37;
+            this.button7.Text = "delete";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(965, 407);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(157, 45);
+            this.button8.TabIndex = 38;
+            this.button8.Text = "delete";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1680, 650);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -813,6 +848,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

@@ -67,8 +67,24 @@ namespace WindowsFormsApp1
         private void button6_Click(object sender, EventArgs e)
         {
             positionBindingSource.EndEdit();
-            positionTableAdapter.Update(dataSet1);
+            positionTableAdapter.Update(dataSet1); 
 
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            candidateDataGridView.Rows.Remove(candidateDataGridView.SelectedRows[0]);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            hiringContractDataGridView.Rows.Remove(hiringContractDataGridView.SelectedRows[0]);
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            positionDataGridView.Rows.Remove(positionDataGridView.SelectedRows[0]);
         }
     }
 }
