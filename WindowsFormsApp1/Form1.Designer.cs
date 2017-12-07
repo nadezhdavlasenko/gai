@@ -102,6 +102,23 @@
             this.delete = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.candidateTableAdapter1 = new WindowsFormsApp1.DataSet1TableAdapters.CandidateTableAdapter();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.MoveFirst = new System.Windows.Forms.Button();
+            this.MoveNext = new System.Windows.Forms.Button();
+            this.MovePrevious = new System.Windows.Forms.Button();
+            this.MoveLast = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             positionCodeLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
@@ -124,6 +141,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.hiringContractDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionDataGridView)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataSet1
@@ -174,7 +195,7 @@
             this.candidateBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.candidateBindingNavigator.Name = "candidateBindingNavigator";
             this.candidateBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.candidateBindingNavigator.Size = new System.Drawing.Size(1680, 39);
+            this.candidateBindingNavigator.Size = new System.Drawing.Size(2203, 39);
             this.candidateBindingNavigator.TabIndex = 0;
             this.candidateBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -283,10 +304,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.candidateDataGridView.DataSource = this.candidateBindingSource;
-            this.candidateDataGridView.Location = new System.Drawing.Point(29, 68);
+            this.candidateDataGridView.Location = new System.Drawing.Point(30, 257);
             this.candidateDataGridView.Name = "candidateDataGridView";
             this.candidateDataGridView.RowTemplate.Height = 33;
-            this.candidateDataGridView.Size = new System.Drawing.Size(575, 198);
+            this.candidateDataGridView.Size = new System.Drawing.Size(1084, 390);
             this.candidateDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -322,7 +343,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(83, 320);
+            idLabel.Location = new System.Drawing.Point(25, 28);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(35, 25);
             idLabel.TabIndex = 2;
@@ -331,7 +352,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(239, 317);
+            this.idTextBox.Location = new System.Drawing.Point(181, 25);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 31);
             this.idTextBox.TabIndex = 3;
@@ -339,7 +360,7 @@
             // positionCodeLabel
             // 
             positionCodeLabel.AutoSize = true;
-            positionCodeLabel.Location = new System.Drawing.Point(83, 357);
+            positionCodeLabel.Location = new System.Drawing.Point(25, 65);
             positionCodeLabel.Name = "positionCodeLabel";
             positionCodeLabel.Size = new System.Drawing.Size(150, 25);
             positionCodeLabel.TabIndex = 4;
@@ -348,7 +369,7 @@
             // positionCodeTextBox
             // 
             this.positionCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "positionCode", true));
-            this.positionCodeTextBox.Location = new System.Drawing.Point(239, 354);
+            this.positionCodeTextBox.Location = new System.Drawing.Point(181, 62);
             this.positionCodeTextBox.Name = "positionCodeTextBox";
             this.positionCodeTextBox.Size = new System.Drawing.Size(100, 31);
             this.positionCodeTextBox.TabIndex = 5;
@@ -356,7 +377,7 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(83, 394);
+            phoneLabel.Location = new System.Drawing.Point(25, 102);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(78, 25);
             phoneLabel.TabIndex = 6;
@@ -365,7 +386,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(239, 391);
+            this.phoneTextBox.Location = new System.Drawing.Point(181, 99);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
             this.phoneTextBox.TabIndex = 7;
@@ -373,7 +394,7 @@
             // fullNameLabel
             // 
             fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(83, 431);
+            fullNameLabel.Location = new System.Drawing.Point(25, 139);
             fullNameLabel.Name = "fullNameLabel";
             fullNameLabel.Size = new System.Drawing.Size(108, 25);
             fullNameLabel.TabIndex = 8;
@@ -382,7 +403,7 @@
             // fullNameTextBox
             // 
             this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "fullName", true));
-            this.fullNameTextBox.Location = new System.Drawing.Point(239, 428);
+            this.fullNameTextBox.Location = new System.Drawing.Point(181, 136);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(100, 31);
             this.fullNameTextBox.TabIndex = 9;
@@ -390,7 +411,7 @@
             // resumeLinkLabel
             // 
             resumeLinkLabel.AutoSize = true;
-            resumeLinkLabel.Location = new System.Drawing.Point(83, 468);
+            resumeLinkLabel.Location = new System.Drawing.Point(25, 175);
             resumeLinkLabel.Name = "resumeLinkLabel";
             resumeLinkLabel.Size = new System.Drawing.Size(135, 25);
             resumeLinkLabel.TabIndex = 10;
@@ -399,14 +420,14 @@
             // resumeLinkTextBox
             // 
             this.resumeLinkTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.candidateBindingSource, "resumeLink", true));
-            this.resumeLinkTextBox.Location = new System.Drawing.Point(239, 465);
+            this.resumeLinkTextBox.Location = new System.Drawing.Point(181, 175);
             this.resumeLinkTextBox.Name = "resumeLinkTextBox";
             this.resumeLinkTextBox.Size = new System.Drawing.Size(100, 31);
             this.resumeLinkTextBox.TabIndex = 11;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(400, 312);
+            this.button1.Location = new System.Drawing.Point(342, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 40);
             this.button1.TabIndex = 12;
@@ -416,7 +437,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(401, 358);
+            this.button2.Location = new System.Drawing.Point(343, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 40);
             this.button2.TabIndex = 13;
@@ -443,10 +464,10 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.hiringContractDataGridView.DataSource = this.hiringContractBindingSource;
-            this.hiringContractDataGridView.Location = new System.Drawing.Point(622, 68);
+            this.hiringContractDataGridView.Location = new System.Drawing.Point(27, 247);
             this.hiringContractDataGridView.Name = "hiringContractDataGridView";
             this.hiringContractDataGridView.RowTemplate.Height = 33;
-            this.hiringContractDataGridView.Size = new System.Drawing.Size(499, 198);
+            this.hiringContractDataGridView.Size = new System.Drawing.Size(1129, 391);
             this.hiringContractDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn6
@@ -492,10 +513,10 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.positionDataGridView.DataSource = this.positionBindingSource;
-            this.positionDataGridView.Location = new System.Drawing.Point(1142, 68);
+            this.positionDataGridView.Location = new System.Drawing.Point(6, 267);
             this.positionDataGridView.Name = "positionDataGridView";
             this.positionDataGridView.RowTemplate.Height = 33;
-            this.positionDataGridView.Size = new System.Drawing.Size(518, 198);
+            this.positionDataGridView.Size = new System.Drawing.Size(1141, 380);
             this.positionDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn10
@@ -525,7 +546,7 @@
             // codeLabel
             // 
             codeLabel.AutoSize = true;
-            codeLabel.Location = new System.Drawing.Point(629, 317);
+            codeLabel.Location = new System.Drawing.Point(22, 37);
             codeLabel.Name = "codeLabel";
             codeLabel.Size = new System.Drawing.Size(65, 25);
             codeLabel.TabIndex = 16;
@@ -534,7 +555,7 @@
             // codeTextBox
             // 
             this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hiringContractBindingSource, "code", true));
-            this.codeTextBox.Location = new System.Drawing.Point(743, 314);
+            this.codeTextBox.Location = new System.Drawing.Point(136, 34);
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(200, 31);
             this.codeTextBox.TabIndex = 17;
@@ -542,7 +563,7 @@
             // fullNameLabel1
             // 
             fullNameLabel1.AutoSize = true;
-            fullNameLabel1.Location = new System.Drawing.Point(629, 354);
+            fullNameLabel1.Location = new System.Drawing.Point(22, 74);
             fullNameLabel1.Name = "fullNameLabel1";
             fullNameLabel1.Size = new System.Drawing.Size(108, 25);
             fullNameLabel1.TabIndex = 18;
@@ -551,7 +572,7 @@
             // fullNameTextBox1
             // 
             this.fullNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hiringContractBindingSource, "fullName", true));
-            this.fullNameTextBox1.Location = new System.Drawing.Point(743, 351);
+            this.fullNameTextBox1.Location = new System.Drawing.Point(136, 71);
             this.fullNameTextBox1.Name = "fullNameTextBox1";
             this.fullNameTextBox1.Size = new System.Drawing.Size(200, 31);
             this.fullNameTextBox1.TabIndex = 19;
@@ -559,7 +580,7 @@
             // positionLabel
             // 
             positionLabel.AutoSize = true;
-            positionLabel.Location = new System.Drawing.Point(629, 391);
+            positionLabel.Location = new System.Drawing.Point(22, 111);
             positionLabel.Name = "positionLabel";
             positionLabel.Size = new System.Drawing.Size(93, 25);
             positionLabel.TabIndex = 20;
@@ -568,7 +589,7 @@
             // positionTextBox
             // 
             this.positionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hiringContractBindingSource, "position", true));
-            this.positionTextBox.Location = new System.Drawing.Point(743, 388);
+            this.positionTextBox.Location = new System.Drawing.Point(136, 108);
             this.positionTextBox.Name = "positionTextBox";
             this.positionTextBox.Size = new System.Drawing.Size(200, 31);
             this.positionTextBox.TabIndex = 21;
@@ -576,7 +597,7 @@
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(629, 429);
+            dateLabel.Location = new System.Drawing.Point(22, 149);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(60, 25);
             dateLabel.TabIndex = 22;
@@ -585,7 +606,7 @@
             // dateDateTimePicker
             // 
             this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.hiringContractBindingSource, "date", true));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(743, 425);
+            this.dateDateTimePicker.Location = new System.Drawing.Point(136, 145);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
             this.dateDateTimePicker.Size = new System.Drawing.Size(200, 31);
             this.dateDateTimePicker.TabIndex = 23;
@@ -593,7 +614,7 @@
             // positionCodeLabel1
             // 
             positionCodeLabel1.AutoSize = true;
-            positionCodeLabel1.Location = new System.Drawing.Point(1152, 314);
+            positionCodeLabel1.Location = new System.Drawing.Point(17, 35);
             positionCodeLabel1.Name = "positionCodeLabel1";
             positionCodeLabel1.Size = new System.Drawing.Size(150, 25);
             positionCodeLabel1.TabIndex = 24;
@@ -602,7 +623,7 @@
             // positionCodeTextBox1
             // 
             this.positionCodeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "positionCode", true));
-            this.positionCodeTextBox1.Location = new System.Drawing.Point(1382, 311);
+            this.positionCodeTextBox1.Location = new System.Drawing.Point(247, 32);
             this.positionCodeTextBox1.Name = "positionCodeTextBox1";
             this.positionCodeTextBox1.Size = new System.Drawing.Size(100, 31);
             this.positionCodeTextBox1.TabIndex = 25;
@@ -610,7 +631,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(1152, 351);
+            nameLabel.Location = new System.Drawing.Point(17, 72);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(71, 25);
             nameLabel.TabIndex = 26;
@@ -619,7 +640,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(1382, 348);
+            this.nameTextBox.Location = new System.Drawing.Point(247, 69);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 31);
             this.nameTextBox.TabIndex = 27;
@@ -627,7 +648,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(1152, 388);
+            descriptionLabel.Location = new System.Drawing.Point(17, 109);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(123, 25);
             descriptionLabel.TabIndex = 28;
@@ -636,7 +657,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(1382, 385);
+            this.descriptionTextBox.Location = new System.Drawing.Point(247, 106);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 31);
             this.descriptionTextBox.TabIndex = 29;
@@ -644,7 +665,7 @@
             // numberOfVacanciesLabel
             // 
             numberOfVacanciesLabel.AutoSize = true;
-            numberOfVacanciesLabel.Location = new System.Drawing.Point(1152, 425);
+            numberOfVacanciesLabel.Location = new System.Drawing.Point(17, 146);
             numberOfVacanciesLabel.Name = "numberOfVacanciesLabel";
             numberOfVacanciesLabel.Size = new System.Drawing.Size(224, 25);
             numberOfVacanciesLabel.TabIndex = 30;
@@ -653,14 +674,14 @@
             // numberOfVacanciesTextBox
             // 
             this.numberOfVacanciesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.positionBindingSource, "numberOfVacancies", true));
-            this.numberOfVacanciesTextBox.Location = new System.Drawing.Point(1382, 422);
+            this.numberOfVacanciesTextBox.Location = new System.Drawing.Point(247, 143);
             this.numberOfVacanciesTextBox.Name = "numberOfVacanciesTextBox";
             this.numberOfVacanciesTextBox.Size = new System.Drawing.Size(100, 31);
             this.numberOfVacanciesTextBox.TabIndex = 31;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(965, 312);
+            this.button3.Location = new System.Drawing.Point(358, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 40);
             this.button3.TabIndex = 32;
@@ -670,7 +691,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1524, 306);
+            this.button4.Location = new System.Drawing.Point(389, 27);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 40);
             this.button4.TabIndex = 33;
@@ -680,7 +701,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(965, 358);
+            this.button5.Location = new System.Drawing.Point(358, 78);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 40);
             this.button5.TabIndex = 34;
@@ -690,7 +711,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1524, 357);
+            this.button6.Location = new System.Drawing.Point(389, 78);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(156, 40);
             this.button6.TabIndex = 35;
@@ -700,7 +721,7 @@
             // 
             // delete
             // 
-            this.delete.Location = new System.Drawing.Point(401, 411);
+            this.delete.Location = new System.Drawing.Point(343, 119);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(157, 45);
             this.delete.TabIndex = 36;
@@ -710,7 +731,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1523, 411);
+            this.button7.Location = new System.Drawing.Point(388, 132);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(157, 45);
             this.button7.TabIndex = 37;
@@ -720,7 +741,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(965, 407);
+            this.button8.Location = new System.Drawing.Point(358, 127);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(157, 45);
             this.button8.TabIndex = 38;
@@ -728,49 +749,219 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // candidateTableAdapter1
+            // 
+            this.candidateTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 81);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(2191, 700);
+            this.tabControl1.TabIndex = 39;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.MoveLast);
+            this.tabPage1.Controls.Add(this.MovePrevious);
+            this.tabPage1.Controls.Add(this.MoveNext);
+            this.tabPage1.Controls.Add(this.MoveFirst);
+            this.tabPage1.Controls.Add(this.candidateDataGridView);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.resumeLinkTextBox);
+            this.tabPage1.Controls.Add(this.delete);
+            this.tabPage1.Controls.Add(resumeLinkLabel);
+            this.tabPage1.Controls.Add(this.fullNameTextBox);
+            this.tabPage1.Controls.Add(fullNameLabel);
+            this.tabPage1.Controls.Add(this.phoneTextBox);
+            this.tabPage1.Controls.Add(phoneLabel);
+            this.tabPage1.Controls.Add(this.positionCodeTextBox);
+            this.tabPage1.Controls.Add(positionCodeLabel);
+            this.tabPage1.Controls.Add(this.idTextBox);
+            this.tabPage1.Controls.Add(idLabel);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(2175, 653);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Candidate";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.button10);
+            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Controls.Add(this.button12);
+            this.tabPage2.Controls.Add(this.codeTextBox);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.hiringContractDataGridView);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.dateDateTimePicker);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(dateLabel);
+            this.tabPage2.Controls.Add(codeLabel);
+            this.tabPage2.Controls.Add(this.positionTextBox);
+            this.tabPage2.Controls.Add(positionLabel);
+            this.tabPage2.Controls.Add(fullNameLabel1);
+            this.tabPage2.Controls.Add(this.fullNameTextBox1);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(2175, 653);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Hiring contract";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button13);
+            this.tabPage3.Controls.Add(this.button14);
+            this.tabPage3.Controls.Add(this.button15);
+            this.tabPage3.Controls.Add(this.button16);
+            this.tabPage3.Controls.Add(this.positionDataGridView);
+            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.numberOfVacanciesTextBox);
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(numberOfVacanciesLabel);
+            this.tabPage3.Controls.Add(this.descriptionTextBox);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(descriptionLabel);
+            this.tabPage3.Controls.Add(this.nameTextBox);
+            this.tabPage3.Controls.Add(positionCodeLabel1);
+            this.tabPage3.Controls.Add(nameLabel);
+            this.tabPage3.Controls.Add(this.positionCodeTextBox1);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(2175, 653);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Position";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // MoveFirst
+            // 
+            this.MoveFirst.Location = new System.Drawing.Point(566, 62);
+            this.MoveFirst.Name = "MoveFirst";
+            this.MoveFirst.Size = new System.Drawing.Size(130, 46);
+            this.MoveFirst.TabIndex = 37;
+            this.MoveFirst.Text = "MoveFirst";
+            this.MoveFirst.UseVisualStyleBackColor = true;
+            this.MoveFirst.Click += new System.EventHandler(this.MoveFirst_Click);
+            // 
+            // MoveNext
+            // 
+            this.MoveNext.Location = new System.Drawing.Point(737, 118);
+            this.MoveNext.Name = "MoveNext";
+            this.MoveNext.Size = new System.Drawing.Size(170, 46);
+            this.MoveNext.TabIndex = 39;
+            this.MoveNext.Text = "MoveNext";
+            this.MoveNext.UseVisualStyleBackColor = true;
+            this.MoveNext.Click += new System.EventHandler(this.MoveNext_Click);
+            // 
+            // MovePrevious
+            // 
+            this.MovePrevious.Location = new System.Drawing.Point(737, 62);
+            this.MovePrevious.Name = "MovePrevious";
+            this.MovePrevious.Size = new System.Drawing.Size(170, 46);
+            this.MovePrevious.TabIndex = 40;
+            this.MovePrevious.Text = "MovePrevious";
+            this.MovePrevious.UseVisualStyleBackColor = true;
+            this.MovePrevious.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // MoveLast
+            // 
+            this.MoveLast.Location = new System.Drawing.Point(566, 118);
+            this.MoveLast.Name = "MoveLast";
+            this.MoveLast.Size = new System.Drawing.Size(130, 46);
+            this.MoveLast.TabIndex = 41;
+            this.MoveLast.Text = "MoveLast";
+            this.MoveLast.UseVisualStyleBackColor = true;
+            this.MoveLast.Click += new System.EventHandler(this.MoveLast_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(595, 127);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(130, 46);
+            this.button9.TabIndex = 45;
+            this.button9.Text = "MoveLast";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(766, 71);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(170, 46);
+            this.button10.TabIndex = 44;
+            this.button10.Text = "MovePrevious";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(766, 127);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(170, 46);
+            this.button11.TabIndex = 43;
+            this.button11.Text = "MoveNext";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(595, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(130, 46);
+            this.button12.TabIndex = 42;
+            this.button12.Text = "MoveFirst";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(652, 134);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(130, 46);
+            this.button13.TabIndex = 45;
+            this.button13.Text = "MoveLast";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(823, 78);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(170, 46);
+            this.button14.TabIndex = 44;
+            this.button14.Text = "MovePrevious";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(823, 134);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(170, 46);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "MoveNext";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(652, 78);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(130, 46);
+            this.button16.TabIndex = 42;
+            this.button16.Text = "MoveFirst";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1680, 650);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(positionCodeLabel1);
-            this.Controls.Add(this.positionCodeTextBox1);
-            this.Controls.Add(nameLabel);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(descriptionLabel);
-            this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(numberOfVacanciesLabel);
-            this.Controls.Add(this.numberOfVacanciesTextBox);
-            this.Controls.Add(codeLabel);
-            this.Controls.Add(this.codeTextBox);
-            this.Controls.Add(fullNameLabel1);
-            this.Controls.Add(this.fullNameTextBox1);
-            this.Controls.Add(positionLabel);
-            this.Controls.Add(this.positionTextBox);
-            this.Controls.Add(dateLabel);
-            this.Controls.Add(this.dateDateTimePicker);
-            this.Controls.Add(this.positionDataGridView);
-            this.Controls.Add(this.hiringContractDataGridView);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(positionCodeLabel);
-            this.Controls.Add(this.positionCodeTextBox);
-            this.Controls.Add(phoneLabel);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(fullNameLabel);
-            this.Controls.Add(this.fullNameTextBox);
-            this.Controls.Add(resumeLinkLabel);
-            this.Controls.Add(this.resumeLinkTextBox);
-            this.Controls.Add(this.candidateDataGridView);
+            this.ClientSize = new System.Drawing.Size(2203, 784);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.candidateBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -785,6 +976,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.hiringContractDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionDataGridView)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -851,6 +1049,23 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private DataSet1TableAdapters.CandidateTableAdapter candidateTableAdapter1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button MoveFirst;
+        private System.Windows.Forms.Button MoveLast;
+        private System.Windows.Forms.Button MovePrevious;
+        private System.Windows.Forms.Button MoveNext;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }
 

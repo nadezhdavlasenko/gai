@@ -86,5 +86,26 @@ namespace WindowsFormsApp1
         {
             positionDataGridView.Rows.Remove(positionDataGridView.SelectedRows[0]);
         }
+
+        private void MoveFirst_Click(object sender, EventArgs e)
+        {
+            candidateBindingSource.MoveFirst();
+
+        }
+
+        private void MoveLast_Click(object sender, EventArgs e)
+        {
+            candidateBindingSource.MoveLast();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            candidateBindingSource.MovePrevious();
+        }
+
+        private void MoveNext_Click(object sender, EventArgs e)
+        {
+            candidateBindingSource.MoveNext();
+        }
     }
 }
